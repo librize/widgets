@@ -6,7 +6,7 @@
 
 Librizeに最近登録された書籍を表示します。
 
-ウィジェットを使うには、jQueryとlatest.jsが必要です。次の2行をHTMLのHEADか、BODYの最後に書きます。
+ウィジェットを使うには、jQueryとlatest.jsが必要です。次の2行をHTMLのHEADに書きます。(BODYの最後でも構いません)
 
 ```html
 <script src="http://code.jquery.com/jquery-1.7.js"></script>
@@ -41,9 +41,7 @@ HTML全体としては下記のようになるでしょう。
 </html>
 ```
 
-### 設定可能な項目
-
-#### 場所
+### 場所
 
 * 必須項目 : YES
 * 個別指定 : data-place 属性
@@ -58,7 +56,7 @@ HTML全体としては下記のようになるでしょう。
 <div class="librize-widget latest" data-place="5"></div>
 ```
 
-#### 表示する冊数
+### 表示する冊数
 
 * 必須項目 : NO
 * デフォルトの値 : 5
@@ -68,7 +66,7 @@ HTML全体としては下記のようになるでしょう。
 <div class="librize-widget latest" data-place="5" data-limit="3"></div>
 ```
 
-#### 表紙画像の縦サイズ (px)
+### 表紙画像の縦サイズ (px)
 
 * 必須項目 : NO
 * デフォルトの値 : 75
@@ -78,7 +76,7 @@ HTML全体としては下記のようになるでしょう。
 <div class="librize-widget latest" data-place="5" data-height="180"></div>
 ```
 
-#### 表示のテーマ
+### 表示のテーマ
 
 * 必須項目 : NO
 * デフォルトの値 : simple
@@ -90,4 +88,15 @@ HTML全体としては下記のようになるでしょう。
 
 ```html
 <div class="librize-widget latest" data-place="5" data-theme="none"></div>
+```
+
+### 複数表示するには?
+
+使いたいところに、DIVを並べればOK。(1画面に複数のウィジェットを配置して問題ありません)
+
+```html
+<h2>下北沢オープンソースCafe</h2>
+<div class="librize-widget latest" data-place="3"></div>
+<h2>原宿テラス</h2>
+<div class="librize-widget latest" data-place="5"></div>
 ```
