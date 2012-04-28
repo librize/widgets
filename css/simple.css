@@ -1,0 +1,13 @@
+div.librize-widget.latest ul.simple {
+	border:0;
+	padding:0;
+	margin:0;
+}
+div.librize-widget.latest ul.simple li {
+	list-style:none;
+	display:inline-block;
+	margin:10px;
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+}
