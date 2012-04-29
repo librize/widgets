@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Widget for Librize.com</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	
+	<script src="http://code.jquery.com/jquery-1.7.js"></script>
+	<script src="http://librize.github.com/widgets/js/latest.js"></script>
+	
+	<script src="http://masonry.desandro.com/jquery.masonry.min.js"></script>
+	<script>
+	widget.updated = function(dom){
+		dom.imagesLoaded( function(){
+			dom.masonry({itemSelector : 'li'});
+		});
+	};
+	</script>
+</head>
+<body>
+	<h1>Masonry</h1>
+	<div class="librize-widget latest masonry" data-place="3" data-width="150" data-limit="20"></div>
+</body>
+</html>
