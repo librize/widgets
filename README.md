@@ -1,6 +1,6 @@
 # Widgets for Librize.com
 
-ここでは、Librize向けのウィジェットを公開しています。
+ここでは、リブライズ向けのウィジェットを公開しています。[サンプルページはこちら](http://librize.github.com/widgets/sample.html)。
 
 ## 新刊本ウィジェット
 
@@ -13,7 +13,7 @@ Librizeに最近登録された書籍を表示します。
 <script src="http://librize.github.com/widgets/js/latest.js"></script>
 ```
 
-新刊本を並べたいところに次のように書きます。```data-place```は場所のIDです。
+新刊本を並べたいところに次のように書きます。```data-place```は場所のID(※後述)です。
 
 
 ```html
@@ -46,7 +46,7 @@ HTML全体としては下記のようになるでしょう。
 * 必須項目 : YES
 * 個別指定 : data-place 属性
 
-場所のIDはLiblizeのサイトでURLを見ると分かります。例えば、[原宿テラス](http://librize.com/places/5)の場合「5」を指定します。以下いくつかの場所の例を挙げます。
+場所のIDはリブライズのサイトでURLを見ると分かります。例えば、[原宿テラス](http://librize.com/places/5)の場合「5」を指定します。以下いくつかの場所の例を挙げます。
 
 * PAX Coworking http://librize.com/places/2 →「2」を指定
 * 下北沢オープンソースCafe http://librize.com/places/3 →「3」を指定
@@ -55,6 +55,8 @@ HTML全体としては下記のようになるでしょう。
 ```html
 <div class="librize-widget latest" data-place="5"></div>
 ```
+
+**※場所IDについての補足** : 2012年10月のアップデートで、 http://librize.com/osscafe のようなユニークURLが使えるようになりました。現在のところ数字のIDの代りに「osscafe」などを使うことはできません。数字のIDが不明な場合はお調べしますので、[リブライズCafe](https://www.facebook.com/groups/372819106128130/)または[Facebookメッセージ](https://www.facebook.com/librize)で問い合わせ下さい。
 
 ### 表示する冊数
 
