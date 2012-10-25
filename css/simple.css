@@ -10,4 +10,27 @@ div.librize-widget.latest ul.simple li {
 	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
 	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+	vertical-align:bottom;
+}
+div.librize-widget.latest ul.simple li a {
+	display:block;
+	line-height:0;
+	text-decoration:none;
+}
+div.librize-widget.latest ul.simple li.noimage a {
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	line-height:1.2em;
+}
+div.librize-widget.latest ul.simple li.noimage a span {
+	padding:10px;
+	background:#EEF7F7;
+	border-left:10px solid #336699;
+	color:#666;
+	font-weight:bold;
+	white-space:normal;
+	display:block;
+	height:100%;
+	font-size:13px;
 }

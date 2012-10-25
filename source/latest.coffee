@@ -4,7 +4,7 @@ widget =
 	default_params : {}
 	style_loaded : {}
 	addStyle : (url) -> $('head').append """<link rel="stylesheet" type="text/css" href="#{url}" />"""
-	getQueryParams : (str) ->
+	getQueryParams : (str = '') ->
 		ps = {}
 		for p in (str.replace /^.*\?/, '').split '&'
 			[key, val] = p.split '='
@@ -27,12 +27,16 @@ widget =
 		if place
 			@addStyle "#{widget.root}/css/#{theme}.css" if theme != 'none' unless @style_loaded[theme]?
 			@style_loaded[theme] = true
-			url = "#{widget.server}/places/#{place}/place_items.json?limit=#{limit}&height=#{height}&callback=?"
+			#url = "#{widget.server}/places/#{place}/place_items.json?limit=#{limit}&height=#{height}&callback=?"
+			url = "#{widget.server}/places/#{place}/place_items.json?limit=#{limit}&callback=?"
 			$.getJSON url, (data) =>
 				html = """<ul class="#{theme}">"""
 				for book in data
-					book.image = book.image.replace /_SL\d+_/, '_SX' + width + '_' if width
-					html += """<li><a href="#{book.url}"><img src="#{book.image}" alt="#{book.title}" /></a></li>"""
+					book.image = book.image.replace /_SX\d+_/, '_SX' + width + '_' if width
+					book.image = book.image.replace /_SX\d+_/, '_SY' + height + '_' if height
+					h = if height then height else width*1.3
+					w = if width then width else height/1.3
+					html += if book.image == 'no-item-medium-image.jpg' then """<li style="height:#{h}px; width:#{w}px" class="noimage"><a href="#{book.url}"><span>#{book.title}</span></a></li>""" else """<li><a href="#{book.url}"><img src="#{book.image}" alt="#{book.title}" /></a></li>"""
 				html += """</ul>"""
 				d.html html
 				@updated d
