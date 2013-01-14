@@ -13,11 +13,11 @@ Librizeに最近登録された書籍を表示します。
 <script src="http://librize.github.com/widgets/js/latest.js"></script>
 ```
 
-新刊本を並べたいところに次のように書きます。```data-place```は場所のID(※後述)です。
+新刊本を並べたいところに次のように書きます。```data-bookspot```はブックスポットのユニークURL(またはID)です。(※後述)
 
 
 ```html
-<div class="librize-widget latest" data-place="5"></div>
+<div class="librize-widget latest" data-bookspot="osscafe"></div>
 ```
 
 HTML全体としては下記のようになるでしょう。
@@ -36,7 +36,7 @@ HTML全体としては下記のようになるでしょう。
 <body>
 	<h1>新刊本ウィジェットの使い方</h1>
 	<h2>場所を指定 (必須)</h2>
-	<div class="librize-widget latest" data-place="5"></div>
+	<div class="librize-widget latest" data-bookspot="osscafe"></div>
 </body>
 </html>
 ```
@@ -46,7 +46,7 @@ HTML全体としては下記のようになるでしょう。
 * 必須項目 : YES
 * 個別指定 : data-bookspot 属性
 
-ブックスポットのIDはリブライズのサイトでURLを見ると分かります。例えば、[下北沢オープンソースCafe](http://librize.com/osscafe)の場合「osscafe」を指定します。以下いくつかの場所の例を挙げます。
+ブックスポットのユニークURLは、リブライズのサイトでURLを見ると分かります。例えば、[下北沢オープンソースCafe](http://librize.com/osscafe)の場合「osscafe」を指定します。以下いくつかの場所の例を挙げます。
 
 * 下北沢オープンソースCafe http://librize.com/osscafe →「osscafe」を指定
 * Office7F http://librize.com/office7F →「office7F」を指定
