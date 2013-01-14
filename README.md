@@ -41,22 +41,26 @@ HTML全体としては下記のようになるでしょう。
 </html>
 ```
 
-### 場所
+### ブックスポット
 
 * 必須項目 : YES
-* 個別指定 : data-place 属性
+* 個別指定 : data-bookspot 属性
 
-場所のIDはリブライズのサイトでURLを見ると分かります。例えば、[原宿テラス](http://librize.com/places/5)の場合「5」を指定します。以下いくつかの場所の例を挙げます。
+ブックスポットのIDはリブライズのサイトでURLを見ると分かります。例えば、[下北沢オープンソースCafe](http://librize.com/osscafe)の場合「osscafe」を指定します。以下いくつかの場所の例を挙げます。
+
+* 下北沢オープンソースCafe http://librize.com/osscafe →「osscafe」を指定
+* Office7F http://librize.com/office7F →「office7F」を指定
+
+ユニークURLを取得していない場合は、下記のように数字を指定します。
 
 * PAX Coworking http://librize.com/places/2 →「2」を指定
-* 下北沢オープンソースCafe http://librize.com/places/3 →「3」を指定
-* 原宿テラス http://librize.com/places/5 →「5」を指定
+* ZEN Coworking http://librize.com/places/6 →「6」を指定
 
 ```html
 <div class="librize-widget latest" data-place="5"></div>
 ```
 
-**※場所IDについての補足** : 2012年10月のアップデートで、 http://librize.com/osscafe のようなユニークURLが使えるようになりました。現在のところ数字のIDの代りに「osscafe」などを使うことはできません。数字のIDが不明な場合はお調べしますので、[リブライズCafe](https://www.facebook.com/groups/372819106128130/)または[Facebookメッセージ](https://www.facebook.com/librize)で問い合わせ下さい。
+**※ユニークURLついて** : 2012年10月のアップデートで、 http://librize.com/osscafe のようなユニークURLが使えるようになりました。蔵書が29冊以上になると、設定できます。
 
 ### 表示する冊数
 

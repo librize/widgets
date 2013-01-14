@@ -19,7 +19,7 @@ widget =
 			width : params.width || 0
 			theme : params.theme || 'simple'
 	show : (d) ->
-		place = (d.attr 'data-place') || @default_params.place
+		place = (d.attr 'data-bookspot') || (d.attr 'data-place') || @default_params.place
 		limit = (d.attr 'data-limit') || @default_params.limit
 		height = (d.attr 'data-height') || @default_params.height
 		width = (d.attr 'data-width') || @default_params.width
