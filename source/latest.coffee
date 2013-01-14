@@ -13,22 +13,22 @@ widget =
 	getDefaultParams : (str) ->
 		params = @getQueryParams str
 		@default_params = 
-			place : params.place || undefined
+			bookspot : params.bookspot || undefined
 			limit : params.limit || 5
 			height : params.height || 75
 			width : params.width || 0
 			theme : params.theme || 'simple'
 	show : (d) ->
-		place = (d.attr 'data-bookspot') || (d.attr 'data-place') || @default_params.place
+		bookspot = (d.attr 'data-bookspot') || (d.attr 'data-place') || @default_params.bookspot
 		limit = (d.attr 'data-limit') || @default_params.limit
 		height = (d.attr 'data-height') || @default_params.height
 		width = (d.attr 'data-width') || @default_params.width
 		theme = (d.attr 'data-theme') || @default_params.theme
-		if place
+		if bookspot
 			@addStyle "#{widget.root}/css/#{theme}.css" if theme != 'none' unless @style_loaded[theme]?
 			@style_loaded[theme] = true
-			#url = "#{widget.server}/places/#{place}/place_items.json?limit=#{limit}&height=#{height}&callback=?"
-			url = "#{widget.server}/places/#{place}/place_items.json?limit=#{limit}&callback=?"
+			#url = "#{widget.server}/places/#{bookspot}/place_items.json?limit=#{limit}&height=#{height}&callback=?"
+			url = "#{widget.server}/places/#{bookspot}/place_items.json?limit=#{limit}&callback=?"
 			$.getJSON url, (data) =>
 				html = """<ul class="#{theme}">"""
 				for book in data
@@ -41,7 +41,7 @@ widget =
 				d.html html
 				@updated d
 		else
-			console?.log 'Place ID required.'
+			console?.log 'Bookspot Unique URL or ID required.'
 	updated : (d) ->
 		# override this method and do something
 
