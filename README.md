@@ -51,13 +51,13 @@ HTML全体としては下記のようになるでしょう。
 * 下北沢オープンソースCafe http://librize.com/osscafe →「osscafe」を指定
 * Office7F http://librize.com/office7F →「office7F」を指定
 
-ユニークURLを取得していない場合は、下記のように数字を指定します。
+ユニークURLを取得していない場合は、下記のようにID(数字)を指定します。
 
 * PAX Coworking http://librize.com/places/2 →「2」を指定
 * ZEN Coworking http://librize.com/places/6 →「6」を指定
 
 ```html
-<div class="librize-widget latest" data-place="5"></div>
+<div class="librize-widget latest" data-bookspot="6"></div>
 ```
 
 **※ユニークURLついて** : 2012年10月のアップデートで、 http://librize.com/osscafe のようなユニークURLが使えるようになりました。蔵書が29冊以上になると、設定できます。
@@ -69,7 +69,7 @@ HTML全体としては下記のようになるでしょう。
 * 個別指定 : data-limit 属性
 
 ```html
-<div class="librize-widget latest" data-place="5" data-limit="3"></div>
+<div class="librize-widget latest" data-bookspot="osscafe" data-limit="3"></div>
 ```
 
 ### 表紙画像の縦サイズ (px)
@@ -79,7 +79,7 @@ HTML全体としては下記のようになるでしょう。
 * 個別指定 : data-height 属性
 
 ```html
-<div class="librize-widget latest" data-place="5" data-height="180"></div>
+<div class="librize-widget latest" data-bookspot="osscafe" data-height="180"></div>
 ```
 
 ### 表示のテーマ
@@ -93,7 +93,7 @@ HTML全体としては下記のようになるでしょう。
 なお、「none」を指定した場合は、CSSスタイルが適用されません。埋め込むサイトのCSSで見た目を調整して下さい。
 
 ```html
-<div class="librize-widget latest" data-place="5" data-theme="none"></div>
+<div class="librize-widget latest" data-bookspot="osscafe" data-theme="none"></div>
 ```
 
 ### 複数表示するには?
@@ -102,7 +102,7 @@ HTML全体としては下記のようになるでしょう。
 
 ```html
 <h2>下北沢オープンソースCafe</h2>
-<div class="librize-widget latest" data-place="3"></div>
-<h2>原宿テラス</h2>
-<div class="librize-widget latest" data-place="5"></div>
+<div class="librize-widget latest" data-bookspot="osscafe"></div>
+<h2>Office7F</h2>
+<div class="librize-widget latest" data-bookspot="office7F"></div>
 ```
