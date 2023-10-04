@@ -1,6 +1,6 @@
 # Widgets for Librize.com
 
-ここでは、リブライズ向けのウィジェットを公開しています。[サンプルページはこちら](http://librize.github.com/widgets/sample.html)。
+ここでは、リブライズ向けのウィジェットを公開しています。[サンプルページはこちら](http://librize.github.io/widgets/sample.html)。
 
 ## 新刊本ウィジェット
 
@@ -10,7 +10,7 @@ Librizeに最近登録された書籍を表示します。
 
 ```html
 <script src="http://code.jquery.com/jquery-1.7.js"></script>
-<script src="http://librize.github.com/widgets/js/latest.js"></script>
+<script src="http://librize.github.io/widgets/js/latest.js"></script>
 ```
 
 新刊本を並べたいところに次のように書きます。```data-bookspot```はブックスポットのユニークURL(またはID)です。(※後述)
@@ -31,7 +31,7 @@ HTML全体としては下記のようになるでしょう。
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<script src="http://code.jquery.com/jquery-1.7.js"></script>
-	<script src="http://librize.github.com/widgets/js/latest.js"></script>
+	<script src="http://librize.github.io/widgets/js/latest.js"></script>
 </head>
 <body>
 	<h1>新刊本ウィジェットの使い方</h1>
