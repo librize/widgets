@@ -1,6 +1,6 @@
 widget =
 	server : 'http://librize.com'
-	root : 'http://librize.github.com/widgets'
+	root : 'http://librize.github.io/widgets'
 	default_params : {}
 	style_loaded : {}
 	addStyle : (url) -> $('head').append """<link rel="stylesheet" type="text/css" href="#{url}" />"""
